@@ -5,17 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .navBox {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        .button {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+            color: #fff;
+            background-color: #000;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .nav {
+            position: absolute;
+            width: 120px;
+            height: 130px;
+            line-height: 130px;
+            background-size: 100% 100%;
+            left: calc(50% - 60px);
+            transform-origin: 50% 250px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .navBox_1 {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="navBox">
-
+    <style id="style"></style>
+    <div id="navBox" class="navBox close">
+        <div class="navBox_1">
+            <div class="nav">
+                <div>1</div>
+            </div>
+            <div class="nav">
+                <div>2</div>
+            </div>
+            <div class="nav">
+                <div>3</div>
+            </div>
+            <div class="nav">
+                <div>4</div>
+            </div>
+            <div class="nav">
+                <div>5</div>
+            </div>
+            <div class="nav">
+                <div>6</div>
+            </div>
+            <div class="nav">
+                <div>7</div>
+            </div>
+        </div>
+        <div id="button" class="button">close</div>
     </div>
 </body>
 <script>
-    // const style = document.querySelector('#style');
+    const style = document.querySelector('#style');
     const navBox = document.querySelector('#navBox');
-    // const button = document.querySelector('#button');
+    const button = document.querySelector('#button');
 
     const canvas = document.createElement('canvas');
     canvas.width = 120;
@@ -45,10 +107,6 @@
 
         return canvas.toDataURL();
     }
-    
-    const img = new Image();
-    img.src = returnBg('#429a67');
-    navBox.appendChild(img)
 </script>
 
 </html>
